@@ -216,6 +216,7 @@ def main() -> None:
             VARIFICATION:[MessageHandler(filters.TEXT,varification)],
             FULLNAME:[MessageHandler(filters.TEXT,fullname)],
             MANU:[MessageHandler(filters.TEXT,manu)],
+            ORDER:[MessageHandler(filters.StatusUpdate.WEB_APP_DATA & ~filters.COMMAND,order)],
             INFORMATION:[MessageHandler(filters.TEXT,information)],
             SETTINGS:[MessageHandler(filters.TEXT,settings)],
             UPDATEFULLNAME:[MessageHandler(filters.TEXT,updatefullname)],
