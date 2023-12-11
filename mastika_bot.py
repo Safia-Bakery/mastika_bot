@@ -137,7 +137,6 @@ async def manu(update:Update,context:ContextTypes.DEFAULT_TYPE) -> int:
 
 async def order(update:Update,context:ContextTypes.DEFAULT_TYPE) ->int:
     data = json.loads(update.effective_message.web_app_data.data)
-    print(data)
     await update.message.reply_text(translation[context.user_data['language']]['congrats'])
     await update.message.reply_text(translation[context.user_data['language']]['request_order'],reply_markup=ReplyKeyboardMarkup(manu_buttons,resize_keyboard=True))
     return MANU
@@ -217,7 +216,7 @@ def main() -> None:
             VARIFICATION:[MessageHandler(filters.TEXT,varification)],
             FULLNAME:[MessageHandler(filters.TEXT,fullname)],
             MANU:[MessageHandler(filters.TEXT,manu)],
-            ORDER:[MessageHandler(filters.StatusUpdate.WEB_APP_DATA & ~filters.COMMAND,order)],
+            ORDER:[MessageHandler(filters.TEXT,order)],
             INFORMATION:[MessageHandler(filters.TEXT,information)],
             SETTINGS:[MessageHandler(filters.TEXT,settings)],
             UPDATEFULLNAME:[MessageHandler(filters.TEXT,updatefullname)],
