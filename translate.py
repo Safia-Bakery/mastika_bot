@@ -16,6 +16,7 @@ translation = {
         'congrats':'Поздравляю, вы успешно зарегистрировались в нашем боте Safia.😊',
         'request_order':'Отлично! Оформим заказ вместе? 😃',
         'reglament':'Большой информационный текст (редактируемый через Админку)',
-        'comment':'you cannot enter comment for this section now it will be available soon :)'
+        'comment':'you cannot enter comment for this section now it will be available soon :)',
+        'order_created':'Поздравляю, вы успешно оформили заказ😊'
 
 }}

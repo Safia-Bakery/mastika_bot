@@ -137,8 +137,7 @@ async def manu(update:Update,context:ContextTypes.DEFAULT_TYPE) -> int:
 
 async def order(update:Update,context:ContextTypes.DEFAULT_TYPE) ->int:
     data = json.loads(update.effective_message.web_app_data.data)
-    await update.message.reply_text(translation[context.user_data['language']]['congrats'])
-    await update.message.reply_text(translation[context.user_data['language']]['request_order'],reply_markup=ReplyKeyboardMarkup(manu_buttons,resize_keyboard=True))
+    await update.message.reply_text(translation[context.user_data['language']]['order_created'],reply_markup=ReplyKeyboardMarkup(manu_buttons,resize_keyboard=True))
     return MANU
 
 async def information(update:Update,context:ContextTypes.DEFAULT_TYPE) ->int:
