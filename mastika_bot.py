@@ -227,7 +227,6 @@ def main() -> None:
         name="my_conversation",
         persistent=True,
 
-        
     )
 
     application.add_handler(conv_handler)
